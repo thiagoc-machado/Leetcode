@@ -1,0 +1,18 @@
+class Solution(object):
+    # num = [0,5,2,0,1,4,0,9,4,0]
+
+    def moveZeroes(self, nums):
+        list = 0
+        for i in range(len(nums)):
+            if nums[i]:
+                nums[list], nums[i] = nums[i], nums[list]
+                list += 1
+
+
+        # print(nums)
+        # return nums
+    # moveZeroes(0, num)
+"""
+:type nums: List[int]
+:rtype: None Do not return anything, modify nums in-place instead.
+"""

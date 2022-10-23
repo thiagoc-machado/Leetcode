@@ -1,0 +1,10 @@
+class Solution(object):
+    def isSubsequence(self, s, t):
+        for i in s:
+            if i in t:
+                x=t.index(i)
+                t=t[x+1:len(t)]
+            else:
+                return False
+        return True
+        

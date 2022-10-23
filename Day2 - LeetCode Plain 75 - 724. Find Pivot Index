@@ -1,0 +1,17 @@
+class Solution(object):
+    def pivotIndex(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        s = sum(nums)
+        inf = 0
+
+        for i, num in enumerate(nums):
+            if inf == s - inf - num:
+                print(i)
+                return i
+            inf += num
+
+        return -1
+    pivotIndex(0,[1,7,3,6,5,6])

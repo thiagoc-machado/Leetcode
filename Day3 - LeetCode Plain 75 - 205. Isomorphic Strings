@@ -1,0 +1,15 @@
+class Solution(object):
+    def isIsomorphic(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        _dict={}
+        for i in xrange(len(s)):
+            if s[i] not in _dict and t[i] not in _dict.values():
+                _dict[s[i]]=t[i]
+            else:
+                if s[i] not in _dict or _dict[s[i]]!=t[i]:
+                    return False
+        return True

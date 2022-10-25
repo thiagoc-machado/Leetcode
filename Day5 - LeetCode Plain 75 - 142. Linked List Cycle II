@@ -1,0 +1,20 @@
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution(object):
+    def detectCycle(self, head):
+        num = numn = head
+        while numn and numn.next:
+            num = num.next
+            numn = numn.next.next
+            if num == numn:
+                break
+        else:
+            return None
+        while head != num:
+            num = num.next
+            head = head.next
+        return head

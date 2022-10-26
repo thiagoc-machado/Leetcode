@@ -1,0 +1,11 @@
+class Solution(object):
+   def longestPalindrome(self, s):
+        lookup = collections.Counter(s)
+        res, one = 0, False
+        for k, v in lookup.items():
+            if v % 2 == 0:
+                res += v
+            else:
+                res += v - 1
+                one = True
+        return res + one

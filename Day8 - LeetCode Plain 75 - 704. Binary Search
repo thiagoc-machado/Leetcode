@@ -1,0 +1,15 @@
+class Solution(object):
+    def search(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        """
+        if target not in nums:
+            print("not exist")
+            return -1
+        rtype = nums.index(target)
+        print("exist")
+        print(rtype)
+        return rtype
+        

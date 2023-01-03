@@ -1,0 +1,28 @@
+class Solution(object):
+    def lengthOfLastWord(self, s):
+
+        num = -1
+        cont = 0
+        j=0
+        j2 = 0
+
+        for i in range(len(s)-1, -1, -1):
+            a = s[i]
+            j +=1
+            j2 += 1
+            if s[i] != " ":
+                cont = 1
+
+            if s[i] == " ":
+                j2 -=1
+
+            if cont == 1:
+                num += 1
+
+            if s[i] == " " and cont == 1:
+                print(num)
+                return num
+
+            if j==len(s):
+                print(j2)
+                return j2

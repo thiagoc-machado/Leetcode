@@ -1,0 +1,14 @@
+class Solution(object):
+    def containsDuplicate(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        nums.sort()  
+        left, right = 0, 0
+        for right, num in enumerate(nums):
+            if(left != right and nums[left] == nums[right]):    
+                return True
+            if((right - left) == 1):
+                left += 1
+        return False
